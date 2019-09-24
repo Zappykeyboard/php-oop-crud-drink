@@ -27,5 +27,20 @@
   $min = $drinks[0];
   $sum = 0;
 
-  
+  foreach ($drinks as $dr) {
+    
+    $sum += $dr-> getPrezzo();
+
+    if ($max -> getPrezzo() < $dr -> getPrezzo()){
+      $max = $dr;
+    }
+
+    if ($min -> getPrezzo() > $dr -> getPrezzo()){
+      $min = $dr;
+    }
+  }
+
+  echo 'Somma: ' . $sum . '<br>'
+        . ' Massimo: '. $max . '<br>'
+        . ' Minimo ' . $min;
 ?>
