@@ -8,10 +8,13 @@
       private $scadenza;
 
 
-      public function __construct()
-      {
-      
-        # code...
+      public function __construct($row)
+      {    
+        $this-> setId($row['ID']);
+        $this-> setNome($row['nome_bevanda']);
+        $this-> setMarca($row['marca']);
+        $this-> setprezzo($row['prezzo']);
+        $this-> setScadenza($row['data_di_scadenza']);
       }
 
       public function getId(){
